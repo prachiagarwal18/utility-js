@@ -5,6 +5,9 @@ describe('Filter',() =>{
         filterToBeApplied=x=>true;
         expect(filter([],filterToBeApplied)).toEqual([]);
     })
-   
+   it('filter([1,2,3],x => false) should give []',()=>{
+    filterToBeApplied=x=>false;
+    expect(filter([1,2,3],filterToBeApplied)).toEqual([]);
+})
 
 })
