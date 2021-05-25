@@ -13,5 +13,11 @@ describe('Filter',() =>{
     filterToBeApplied=x=>x>1;
     expect(filter([1,2,3],filterToBeApplied)).toEqual([2,3]);
 })
+    it('filter ([a,B,c,D],filterUpperCase) should give [B,D]',()=>{
+    filterToBeApplied=x=>x==x.toUpperCase();
+    expect(filter(['a','B','c','D'],filterToBeApplied)).toEqual(['B','D']);
+
+})
+    
 
 })
